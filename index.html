@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kim Midterm Project</title>
+
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* General Background Gradient Animation */
+    body {
+      background: linear-gradient(45deg, #ff7a18, #af7aeb);
+      animation: gradient 5s infinite alternate;
+      font-family: 'Poppins', sans-serif; /* Updated font */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    @keyframes gradient {
+      0% {
+        background: linear-gradient(45deg, #ff7a18, #af7aeb);
+      }
+      100% {
+        background: linear-gradient(45deg, #ff9d9e, #f3a0c0);
+      }
+    }
+
+    /* Layout Styles */
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .features {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    /* Fade-in and move-up animation for feature items */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feature-item:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    .feature-item:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .feature-item:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+    .feature-item:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    /* Feature Box Styles */
+    .feature-box {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+      margin-bottom: 15px;
+    }
+
+    /* Smooth Scale and Shadow Effect for Image Hover */
+    .feature-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .feature-box:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 500; /* Slightly bolder for readability */
+      text-align: center;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+      width: 200px;
+      margin-top: 15px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: linear-gradient(135deg, #c770f0, #ff7a18);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #a55fd4, #ff6a00);
+      border-color: #ff7a18;
+      animation: bounce 0.5s ease-in-out;
+    }
+
+    /* Bounce Effect for Button Hover */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-5px);
+      }
+      60% {
+        transform: translateY(-2px);
+      }
+    }
+
+    /* Hero Section Fade-in */
+    .hero {
+      opacity: 0;
+      animation: fadeInHero 1.5s ease-in forwards;
+      text-align: center;
+    }
+
+    @keyframes fadeInHero {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hero-title {
+      font-size: 3rem; /* Increased font size for prominence */
+      color: white;
+      font-weight: 600; /* Bold font weight for hero title */
+      margin-top: 20px;
+      letter-spacing: 1px;
+    }
+
+    .hero-title span {
+      font-size: 1.7rem;
+      color: #fff;
+    }
+
+    .hero-title strong {
+      font-size: 3.2rem;
+      color: #ffd700;
+    }
+
+    /* Smooth Scroll Styling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+  
+</head>
+<body>
+  <main>
+    <article>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-banner">
+            <img src="kim p.jpg" width="800" height="864" alt="Matt's Photo" class="img-cover">
+          </div>
+
+          <div class="hero-content">
+            <h2 class="hero-title">
+              <span>Hello I'm</span>
+              <strong>Kimberly Tangkay.</strong><br>
+              Flutter Developer
+            </h2>
+
+            <div class="features-container">
+              <div class="features">
+                  <div class="feature-item">
+                      <a href="https://drive.google.com/drive/folders/1IZlgINN7_DX5LB_tmgVvqxWEnurKFkpl?usp=drive_link" class="feature-box"><img src="kim.png" alt="Feature 1"></a> 
+                      <a href="https://drive.google.com/drive/folders/1tov5j5nDehytqr-Oc8sMqVyCDsyMQOkW?usp=drive_link" class="btn btn-primary">Hello World App</a>
+                  </div>
+          
+                  <div class="feature-item">
+                      <a href="https://drive.google.com/drive/folders/1bvvGlgXKZr2LL87UZI8m7Hx927K4ouDX?usp=drive_link" class="feature-box"><img src="Kim Td.jpg" alt="Feature 2"></a> 
+                      <a href="https://drive.google.com/drive/folders/1CCKMal3iMwgk8kGw8LSWe8VTnUJBMl-U?usp=drive_link" class="btn btn-primary">To-Do App</a>
+                  </div>
+          
+                  <div class="feature-item">
+                      <a href="https://drive.google.com/drive/folders/1OTroFvpyfjWnWdLNI3Dee-5hIPLQIWN8?usp=drive_link" class="feature-box"><img src="kim sc.jpg" alt="Feature 3"></a> 
+                      <a href="https://drive.google.com/drive/folders/1IiuENWKGOPX5vc1f4_BYkdwgn2V4CCG0?usp=drive_link" class="btn btn-primary">Quiz Recorder App</a>
+                  </div>
+          
+                  <div class="feature-item">
+                      <a href="https://drive.google.com/drive/folders/1K6ZV5cLJy9nxwxwwkH4UTcp-Xey0guIj?usp=sharing" class="feature-box"><img src="Kim F.png" alt="Feature 4"></a> 
+                      <a href="https://drive.google.com/drive/folders/1K6ZV5cLJy9nxwxwwkH4UTcp-Xey0guIj?usp=sharing" class="btn btn-primary">Firebase App</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </main>
+</body>
+</html>
